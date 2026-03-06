@@ -97,35 +97,34 @@ export function AttendeePage() {
           <Plus className="group-hover:rotate-90 transition-transform duration-300" />
           Novo participante
         </Button>
-
-        <Modal
-          open={open}
-          onOpenChange={setOpen}
-          title="Cadastro"
-          description="Cadastre um partipante ao evento escolhido!"
-          footer={
-            <>
-              <Button type="submit" onClick={handleAddAttendee}>
-                Adicionar
-              </Button>
-            </>
-          }
-        >
-          <Label>Nome</Label>
-          <Input
-            placeholder="Digite o nome"
-            className="border-white/10"
-            value={newAtendeeName}
-            onChange={(e) => setNewAtendeeName(e.target.value)}
-          />
-
-          <Label>Evento</Label>
-          <SelectEvent
-            value={newSelectEvent} // estado do select
-            onValueChange={(val) => setNewSelectEvent(val)} // atualiza o estado
-          />
-        </Modal>
       </div>
+      <Modal
+        open={open}
+        onOpenChange={setOpen}
+        title="Cadastro"
+        description="Cadastre um partipante ao evento escolhido!"
+        footer={
+          <>
+            <Button type="submit" onClick={handleAddAttendee}>
+              Adicionar
+            </Button>
+          </>
+        }
+      >
+        <Label>Nome</Label>
+        <Input
+          placeholder="Digite o nome"
+          className="border-white/10"
+          value={newAtendeeName}
+          onChange={(e) => setNewAtendeeName(e.target.value)}
+        />
+
+        <Label>Evento</Label>
+        <SelectEvent
+          value={newSelectEvent} // estado do select
+          onValueChange={(val) => setNewSelectEvent(val)} // atualiza o estado
+        />
+      </Modal>
 
       <Table>
         <thead>

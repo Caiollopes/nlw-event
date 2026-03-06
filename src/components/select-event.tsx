@@ -16,9 +16,7 @@ interface SelectEventProps {
 }
 
 export function SelectEvent({ value, onValueChange }: SelectEventProps) {
-  // const [value, setValue] = useState<string | undefined>();
-
-  // Carrega eventos do localStorage ao montar o componente
+  // Carrega eventos do localStorage
   const [events, setEvents] = useState<Event[]>([]);
   useEffect(() => {
     const saved = localStorage.getItem("eventsList");

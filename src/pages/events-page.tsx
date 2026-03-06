@@ -93,37 +93,36 @@ export function EventsPage() {
           <Plus className="group-hover:rotate-90 transition-transform duration-300" />
           Novo evento
         </Button>
-
-        <Modal
-          open={open}
-          onOpenChange={setOpen}
-          title="Eventos"
-          description="Cadastre um evento!"
-          footer={
-            <>
-              <Button type="submit" onClick={handleAddEvent}>
-                Adicionar
-              </Button>
-            </>
-          }
-        >
-          <Label>Nome do evento</Label>
-          <Input
-            placeholder="Digite o nome do evento"
-            className="border-white/10"
-            value={newEventName}
-            onChange={(e) => setNewEventName(e.target.value)}
-          />
-
-          <Label>Local do evento</Label>
-          <Input
-            placeholder="Digite o local do evento"
-            className="border-white/10"
-            value={newEventLocal}
-            onChange={(e) => setNewEventLocal(e.target.value)}
-          />
-        </Modal>
       </div>
+      <Modal
+        open={open}
+        onOpenChange={setOpen}
+        title="Eventos"
+        description="Cadastre um evento!"
+        footer={
+          <>
+            <Button type="submit" onClick={handleAddEvent}>
+              Adicionar
+            </Button>
+          </>
+        }
+      >
+        <Label>Nome do evento</Label>
+        <Input
+          placeholder="Digite o nome do evento"
+          className="border-white/10"
+          value={newEventName}
+          onChange={(e) => setNewEventName(e.target.value)}
+        />
+
+        <Label>Local do evento</Label>
+        <Input
+          placeholder="Digite o local do evento"
+          className="border-white/10"
+          value={newEventLocal}
+          onChange={(e) => setNewEventLocal(e.target.value)}
+        />
+      </Modal>
 
       <Table>
         <thead>

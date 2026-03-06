@@ -1,2 +1,0 @@
-Original: Criou ifs para diferenciar cores do botão
-Mude: Configurei o cva para trabalhar com variants e deixar mais organizado e limpo
